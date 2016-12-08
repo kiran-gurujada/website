@@ -5,8 +5,9 @@
 
 //= require _forms
 //= require _home
+//= require _main-menu
 //= require _map
-//= require _menu
+
 //= require _popup
 //= require _social-share
 //= require _vimeo.ga

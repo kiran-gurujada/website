@@ -211,6 +211,9 @@ de:
     start_now: "Starte durch mit LearningSpaces"
   products:
     title: "Produkte, auf die wir stolz sind."
+    capp:
+      learn: "Bilden"
+      develop: "Entwickeln"
   references:
     title: "Einige Referenzen"
   services:
@@ -256,3 +259,10 @@ de:
     title: "Mehr Informationen über Fort- und Weiterbilden mit CAPP LMS?"
     heading: "CAPP Produktblatt herunterladen"
     formkeep_title: "CAPP: download productsheet page"
+  nav:
+    capp-learn: "Software für ein effizientes Bildungsmanagement und E-Learning"
+    capp-develop: "Bieten Sie nachhaltige und innovative Talententwicklung"
+    kwaliteitspaspoort: "Schaffen Sie einen Überblick aller Qualifikationen und Kompetenzen"
+    learningspaces: "Ihr Tool für spielerischen Wissensaustausch und Informelles Lernen"
+    starterkit: "Lernen Sie, eigene E-Learning Module zu erstellen"
+    threesixty: "Die Sichtweisen der anderen kennen, um sich selbst weiterzuentwickeln"

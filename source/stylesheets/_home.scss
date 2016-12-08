@@ -5,30 +5,6 @@
 
     .header {
       background: transparent;
-
-      @include media($large-up) {
-        .header-menu a {
-          color: $white;
-
-          @include media($large-down) {
-            color: $gray-menu;
-          }
-
-          &:visited {
-            color: $white;
-          }
-
-          &.active {
-            color: $orange;
-          }
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: $orange;
-          }
-        }
-      }
     }
 
     .hero {
