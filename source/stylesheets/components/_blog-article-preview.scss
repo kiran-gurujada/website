@@ -114,4 +114,30 @@
       }
     }
   }
+
+  .blog-article-image {
+
+    @include media($large-up) {
+      .crop {
+        max-height: 480px;
+        object-fit: cover;
+        width: 1228px;
+      }
+    }
+  }
+
+  .blog-article-featured {
+    padding-top: 1em;
+
+    @include media($large-up) {
+      .post-header {
+        font-size: 1.2em;
+
+      }
+
+      .post-body {
+        font-size: 1.4em;
+      }
+    }
+  }
 }

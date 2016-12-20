@@ -6,11 +6,44 @@ description:
 pageable: true
 ---
 
+<%
+featured = blog.local_articles.find { |item| item.metadata[:page]["featured"] rescue false }
+%>
 
 <section class="row">
+  <ol class="blog-list">
 
-    <ol class="blog-list">
-      <% page_articles.each do |article| %>
+    <% if current_page.url == "/blog/" && featured %>
+    <li>
+      <div class="blog-article-preview">
+
+        <div class="blog-article-image">
+          <%= link_to image_tag(featured.data.featured_image_big, alt: featured.title, class: "crop"), featured.url %>
+        </div>
+
+        <div class="blog-article-featured">
+          <article>
+            <header class="post-header">
+              <h2 class="post-title"><%= link_to featured.title, featured.url %></h2>
+            </header>
+
+            <div class="post-body">
+              <%= Nokogiri::HTML(featured.summary).text %>
+              <%= link_to t("blog.read_more"), featured.url, class: "read-more" %>
+            </div>
+
+            <footer class="post-footer">
+              <div class="post-meta">
+                <%= partial "blog/blog-article-author", locals: { article: featured } %>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </li>
+    <% end %>
+
+      <% (page_articles - [featured]).each do |article| %>
         <li>
           <%= partial "blog/blog-article-preview", locals: { article: article } %>
         </li>

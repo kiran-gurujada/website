@@ -4,6 +4,7 @@ date: 2016-10-05 08:00 CEST
 tags:
 author: Joke Coens
 lang: nl
+#featured: true
 image: images/social/gebruikersoverleg-september-2016-1200x630.png
 featured_image: images/blog/featured/20161005-gebruikersoverleg.jpg
 ---

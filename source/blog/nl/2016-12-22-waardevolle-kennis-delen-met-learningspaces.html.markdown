@@ -7,6 +7,7 @@ lang: nl
 featured: true
 image: images/social/waardevolle-kennis-learningspaces-1200x630.png
 featured_image: images/blog/featured/20161214-workshop-learningspaces.jpg
+featured_image_big: images/blog/featured/20161214-workshop-learningspaces-1228x768.jpg
 ---
 
 **Eind november was het tijd voor een workshop [LearningSpaces](http://www.learningspaces.nl){:target="_blank"} in het mooie Zwolle. Medewerkers van onder andere het Radboud Universitair Medisch Centrum, Syndion, Maastricht Universitair Medisch Centrum, Albert Schweitzer ziekenhuis en Gelre Ziekenhuis zijn hier aanwezig om te leren hoe zij op een eenvoudige manier kennis kunnen delen. Als spreker is vandaag present Ronald van Rheenen, nucleair geneeskundige in het UMCG en early adopter van LearningSpaces.**

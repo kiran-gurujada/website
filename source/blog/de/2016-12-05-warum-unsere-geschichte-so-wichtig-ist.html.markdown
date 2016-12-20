@@ -7,6 +7,7 @@ lang: de
 featured: true
 image: images/social/warum-unsere-geschichte-1200x630.png
 featured_image: images/blog/featured/20161205-geschichte.png
+featured_image_big: images/blog/featured/20161205-geschichte-1228x768.png
 ---
 
 **Wie genau die eigene Geschichte für uns wichtig ist und welche Details uns besonders bereichert und weitergebracht haben, entscheidet man natürlich persönlich für sich. Wo sich der Eine vor Neugier über ein Ereignis kaum halten kann, will ein Anderer lieber so viel Abstand wie möglich halten. Wenn es allerdings um die Aus- und Weiterbildungsgeschichte im Gesundheitswesen geht, so hat sie doch überall einen hohen Stellenwert.**
