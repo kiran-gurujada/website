@@ -55,7 +55,6 @@
 - name: Marieke van Kernebeek
   company: "Office manager, Phoenix Opleidingen"
   avatar: testimonials/marieke_van_kernebeek.jpg
-  featured: true
   quote: >
     Het fijnste aan de samenwerking met de mensen van Defacto is dat we al zo lang zulk intensief contact hebben,
     dat je weet dat je van elkaar op aan kunt. Door dit vertrouwen is er ook ruimte voor een kritische noot.
@@ -71,6 +70,7 @@
 - name: Peter van Overbruggen
   company: "Opleidingsadviseur, ZuidZorg"
   avatar: testimonials/peter_van_overbruggen.jpg
+  featured: true
   quote: >
     <p>Het project met Defacto betrof de invoering van CAPP11 in onze organisatie voor alle drie de onderdelen
     (opleiden, ontwikkelen en kwaliteit). Het contact met de mensen van Defacto verliep prima. Zij zijn samenwerkingsgericht,
