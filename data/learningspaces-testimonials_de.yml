@@ -1,0 +1,45 @@
+#
+# TESTIMONIALS
+#####################################################################################################
+#
+# Note:
+#
+# Testimonials are displayed from top to bottom. So the first in this file will be on top.
+# Same goes for featured testimonials (on homepage): the first two with featured:true will show.
+#
+# Example:
+#
+# - name: Martina de Vos
+#   company: "Opleidingsadviseur, Sint Franciscus Gasthuis"
+#   avatar: testimonials/martina_de_vos.jpg
+#   featured: true
+#   quote: "This is the full version of the quote"
+#   summary: "This is the short version of the quote (optional, only used when summary:true)"
+#
+# Usage:
+#
+# <%= partial "testimonials", locals: {
+#   count: 2,         # amount of testimonials to show (optional)
+#   featured: true,   # only show featured (optional)
+#   summary: true     # show summary if present, otherwise the full quote (optional)
+# } %>
+#
+#####################################################################################################
+
+- name: Michael Hebben
+  company: Corporate Learning Consultant
+  avatar: testimonials/michael_hebben.jpg
+  quote: >
+    <p>Mit LearningSpaces kann ich meine persönliche/eigene Entwicklung in die Hand nehmen und zur gleichen Zeit zum Lernprozess von anderen beitragen.</p>
+
+- name: Ronald van Rheenen
+  company: Nuklearmedizin, Universitätsklinik Groningen
+  avatar: testimonials/ronald_van_rheenen.jpg
+  quote: >
+    <p>LearningSpaces hilft meiner Abteilung indem es informelles Lernen und den Wissenaustausch ermöglicht.</p>
+
+- name: Esther Douma
+  company: Training Coordinator, DPA Benkis
+  avatar: testimonials/esther_douma.jpg
+  quote: >
+    <p>Wir nutzen LearningSpaces in unserem Banken-Traineeprogramm für Schulungen, Workshops und Coaching. Aufgaben, Evaluationen, Diskussionen und praktische Informationen sind so leicht zu überschauen.</p>

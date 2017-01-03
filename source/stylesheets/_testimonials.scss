@@ -3,13 +3,25 @@
   text-align: center;
 
   &.inverted {
-    background-color: #fff;
+    background-color: $white;
 
     .quote {
       background-color: $lighter-gray;
 
       &::before {
         background-color: $lighter-gray;
+      }
+    }
+  }
+
+  &.cols .testimonial-list {
+    margin: 0;
+    max-width: none;
+
+    li {
+      @include media($large-up) {
+        @include span-columns(4);
+        @include omega(3n);
       }
     }
   }

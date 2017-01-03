@@ -1,0 +1,45 @@
+#
+# TESTIMONIALS
+#####################################################################################################
+#
+# Note:
+#
+# Testimonials are displayed from top to bottom. So the first in this file will be on top.
+# Same goes for featured testimonials (on homepage): the first two with featured:true will show.
+#
+# Example:
+#
+# - name: Martina de Vos
+#   company: "Opleidingsadviseur, Sint Franciscus Gasthuis"
+#   avatar: testimonials/martina_de_vos.jpg
+#   featured: true
+#   quote: "This is the full version of the quote"
+#   summary: "This is the short version of the quote (optional, only used when summary:true)"
+#
+# Usage:
+#
+# <%= partial "testimonials", locals: {
+#   count: 2,         # amount of testimonials to show (optional)
+#   featured: true,   # only show featured (optional)
+#   summary: true     # show summary if present, otherwise the full quote (optional)
+# } %>
+#
+#####################################################################################################
+
+- name: Peter van Eijl
+  company: Founder, Doppio Espresso
+  avatar: testimonials/peter_van_eijl.jpg
+  quote: >
+    <p>LearningSpaces is een open platform voor alle deelnemers, het opent een wereld van gedeelde kennis tussen al onze verschillende disciplines. Daar bovenop levert het op een gebruiksvriendelijke manier rijke en strakke inhoud op.</p>
+
+- name: Ronald van Rheenen
+  company: Nucleair geneeskundige, University Medical Center Groningen
+  avatar: testimonials/ronald_van_rheenen.jpg
+  quote: >
+    <p>LearningSpaces biedt mij de mogelijkheid om kennis te delen en kennis te nemen van anderen.</p>
+
+- name: Esther Douma
+  company: Training Coordinator, DPA Benkis
+  avatar: testimonials/esther_douma.jpg
+  quote: >
+    <p>LearningSpaces helpt ons de communicatie met en tussen onze trainees duidelijk en soepel te laten verlopen. We gebruiken de spaces voor het traineeprogramma Bancair met verschillende trainingen, workshops en coaching. Voorbereidigsopdrachten, evaluaties, onderlinge discussie en praktische informatie is zo heel gemakkelijk te beheren!</p>
