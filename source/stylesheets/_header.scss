@@ -227,9 +227,28 @@ $desktop-mode-down: max-width 999px;
     }
   }
 
+  .dropdown-arrow {
+    @include media($desktop-mode) {
+      @include backface-visibility(hidden);
+      @include transform(translate3d(0, 0, 0));
+      @include transition(opacity 0.3s ease);
+      border: 8px solid transparent;
+      border-bottom-color: $white;
+      bottom: 100%;
+      height: 0;
+      left: 0;
+      margin-left: -8px;
+      opacity: 0;
+      position: absolute;
+      width: 0;
+      will-change: transform;
+    }
+  }
+
   .dropdown-list {
     @include media($desktop-mode) {
-      @include transform(translateZ(0));
+      @include backface-visibility(hidden);
+      @include transform(translate3d(0, 0, 0));
       @include transition(visibility 0.3s ease);
       box-shadow: 0 10px 20px rgba($black, 0.08);
       left: 0;
@@ -238,21 +257,6 @@ $desktop-mode-down: max-width 999px;
       visibility: hidden;
       width: 100%;
       will-change: transform, width, height;
-
-      &::before {
-        @include transform(translateY(0));
-        @include transition(opacity 0.3s ease, visibility 0.3s ease);
-        border: 8px solid transparent;
-        border-bottom-color: $white;
-        bottom: 100%;
-        content: "";
-        height: 0;
-        left: 50%;
-        opacity: 0;
-        position: absolute;
-        right: auto;
-        width: 0;
-      }
 
       > ul {
         height: 100%;
@@ -418,13 +422,14 @@ $desktop-mode-down: max-width 999px;
         @include transform(translateY(0));
       }
 
+      .dropdown-arrow {
+        @include transition(opacity 0.3s ease, transform 0.3s ease);
+        opacity: 1;
+      }
+
       .dropdown-list {
         @include transition(transform 0.3s ease, width 0.3s ease, height 0.3s ease);
         visibility: visible;
-
-        &::before {
-          opacity: 1;
-        }
       }
 
       .bg-layer {
@@ -446,7 +451,6 @@ $desktop-mode-down: max-width 999px;
   }
 
   .dropdown {
-
     @include media($desktop-mode-down) {
       padding: 1em 0;
 
@@ -548,9 +552,9 @@ $desktop-mode-down: max-width 999px;
   .bg-layer {
     @include media($desktop-mode) {
       @include backface-visibility(hidden);
-      @include transform (translateZ(0));
-      @include transform-origin (top left);
-      @include transition (opacity 0.3s ease);
+      @include transform(translate3d(0, 0, 0));
+      @include transform-origin(top left);
+      @include transition(opacity 0.3s ease);
       background: $white;
       height: 1px;
       left: 0;
@@ -689,7 +693,6 @@ a {
 .no-csstransitions {
   .morph-dropdown {
     .dropdown-list {
-
       @include media($desktop-mode) {
         display: none;
       }

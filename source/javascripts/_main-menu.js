@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
 		this.element = element;
 		this.mainNavigation = this.element.find('.main-nav');
 		this.mainNavigationItems = this.mainNavigation.find('.has-dropdown');
+    this.dropdownArrow = this.element.find('.dropdown-arrow');
 		this.dropdownList = this.element.find('.dropdown-list');
 		this.dropdownWrappers = this.dropdownList.find('.dropdown');
 		this.dropdownItems = this.dropdownList.find('.content');
@@ -80,22 +81,18 @@ jQuery(document).ready(function($){
 	};
 
 	morphDropdown.prototype.updateDropdown = function(dropdownItem, height, width, left) {
+    this.dropdownArrow.css({
+      'transform': 'translate3d(' + (left + width/2) + 'px, 0, 0)'
+    });
+
 		this.dropdownList.css({
-		    '-moz-transform': 'translateX(' + left + 'px)',
-		    '-webkit-transform': 'translateX(' + left + 'px)',
-			'-ms-transform': 'translateX(' + left + 'px)',
-			'-o-transform': 'translateX(' + left + 'px)',
-			'transform': 'translateX(' + left + 'px)',
-			'width': width+'px',
-			'height': height+'px'
+      'transform': 'translate3d(' + left + 'px, 0, 0)',
+			'width': width + 'px',
+			'height': height + 'px'
 		});
 
 		this.dropdownBg.css({
-			'-moz-transform': 'scaleX(' + width + ') scaleY(' + height + ')',
-		    '-webkit-transform': 'scaleX(' + width + ') scaleY(' + height + ')',
-			'-ms-transform': 'scaleX(' + width + ') scaleY(' + height + ')',
-			'-o-transform': 'scaleX(' + width + ') scaleY(' + height + ')',
-			'transform': 'scaleX(' + width + ') scaleY(' + height + ')'
+      'transform': 'scale3d(' + width + ', ' + height + ', 1)'
 		});
 	};
 
