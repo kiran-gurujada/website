@@ -1,7 +1,8 @@
 $desktop-mode: min-width 1000px;
 $desktop-mode-down: max-width 999px;
 
-.no-scroll { // used for mobile nav overlay
+// Used for mobile nav overlay
+.no-scroll {
   @include media($desktop-mode-down) {
     overflow: hidden;
     position: fixed;
@@ -123,11 +124,11 @@ $desktop-mode-down: max-width 999px;
 
         &::after {
           @include transform(rotate(-45deg));
-         }
-       }
+        }
+      }
     }
 
-    .morph-dropdown-wrapper {
+    .dropdown-wrapper {
       display: block;
       z-index: 9999;
     }
@@ -139,16 +140,11 @@ $desktop-mode-down: max-width 999px;
     @include media($desktop-mode) {
       display: inline-block;
 
-      ul {
+      ul:hover li > a {
+        opacity: 0.6;
 
         &:hover {
-          li > a {
-            opacity: 0.6;
-          }
-
-          li > a:hover {
-            opacity: 1;
-          }
+          opacity: 1;
         }
       }
 
@@ -158,7 +154,6 @@ $desktop-mode-down: max-width 999px;
         line-height: 74px;
 
         a {
-
           @include transition(opacity 0.2s ease);
           color: $gray-menu;
           display: block;
@@ -166,13 +161,22 @@ $desktop-mode-down: max-width 999px;
           font-weight: bold;
           padding: 0 20px;
 
+          &:hover,
+          &:focus,
+          &:active,
           &.active {
             color: $orange;
           }
+        }
+
+        // Homepage
+        @at-root body.index & a {
+          color: $white;
 
           &:hover,
           &:focus,
-          &:active {
+          &:active,
+          &.active {
             color: $orange;
           }
         }
@@ -204,7 +208,7 @@ $desktop-mode-down: max-width 999px;
     }
   }
 
-  .morph-dropdown-wrapper {
+  .dropdown-wrapper {
     background-color: $white;
     box-shadow: inset 0 1px 0 $post-shadow;
     display: none;
@@ -415,10 +419,8 @@ $desktop-mode-down: max-width 999px;
   }
 
   &.is-dropdown-visible {
-
     @include media($desktop-mode) {
-
-      .morph-dropdown-wrapper {
+      .dropdown-wrapper {
         @include transform(translateY(0));
       }
 
@@ -565,147 +567,125 @@ $desktop-mode-down: max-width 999px;
       will-change: transform;
     }
   }
-}
 
-// Icons
-a {
-  &.nav-capp {
-    em {
-      color: $blue;
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat 0 0;
-    }
-
-    &:hover {
+  // Icons
+  a {
+    &.nav-capp {
       em {
-        color: darken($blue, 15%);
+        color: $blue;
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat 0 -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat 0 0;
+      }
+
+      &:hover {
+        em {
+          color: darken($blue, 15%);
+        }
+
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat 0 -70px;
+        }
       }
     }
-  }
 
-  &.nav-develop {
-    em {
-      color: $blue;
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat -70px 0;
-    }
-
-    &:hover {
+    &.nav-develop {
       em {
-        color: darken($blue, 15%);
+        color: $blue;
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat -70px -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat -70px 0;
+      }
+
+      &:hover {
+        em {
+          color: darken($blue, 15%);
+        }
+
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat -70px -70px;
+        }
       }
     }
-  }
 
-  &.nav-kwaliteitspaspoort {
-    em {
-      color: $turquoise;
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat -140px 0;
-    }
-
-    &:hover {
+    &.nav-kwaliteitspaspoort {
       em {
-        color: darken($turquoise, 15%);
+        color: $turquoise;
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat -140px -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat -140px 0;
+      }
+
+      &:hover {
+        em {
+          color: darken($turquoise, 15%);
+        }
+
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat -140px -70px;
+        }
       }
     }
-  }
 
-  &.nav-learningspaces {
-    em {
-      color: $green;
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat -210px 0;
-    }
-
-    &:hover {
+    &.nav-learningspaces {
       em {
-        color: darken($green, 15%);
+        color: $green;
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat -210px -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat -210px 0;
+      }
+
+      &:hover {
+        em {
+          color: darken($green, 15%);
+        }
+
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat -210px -70px;
+        }
       }
     }
-  }
 
-  &.nav-elearning-starterkit {
-    em {
-      color: lighten($red, 15);
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat -280px 0;
-    }
-
-    &:hover {
+    &.nav-elearning-starterkit {
       em {
-        color: $red;
+        color: lighten($red, 15);
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat -280px -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat -280px 0;
+      }
+
+      &:hover {
+        em {
+          color: $red;
+        }
+
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat -280px -70px;
+        }
       }
     }
-  }
 
-  &.nav-360-feedback {
-    em {
-      color: $orange;
-    }
-
-    &::before {
-      background: url("../images/icons/menu-icons-sprite.png") no-repeat -350px 0;
-    }
-
-    &:hover {
+    &.nav-360-feedback {
       em {
-        color: darken($orange, 15%);
+        color: $orange;
       }
 
       &::before {
-        background: url("../images/icons/menu-icons-sprite.png") no-repeat -350px -70px;
+        background: url("../images/icons/menu-icons-sprite.png") no-repeat -350px 0;
       }
-    }
-  }
-}
 
-.no-csstransitions {
-  .morph-dropdown {
-    .dropdown-list {
-      @include media($desktop-mode) {
-        display: none;
-      }
-    }
-  }
-}
+      &:hover {
+        em {
+          color: darken($orange, 15%);
+        }
 
-.index {
-  .main-nav {
-    ul {
-      li {
-        a {
-          color: $white;
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat -350px -70px;
         }
       }
     }
