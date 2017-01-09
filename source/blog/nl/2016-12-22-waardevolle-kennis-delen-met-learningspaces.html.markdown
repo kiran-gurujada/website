@@ -4,7 +4,6 @@ date: 2016-12-22 08:00 CEST
 tags:
 author: Iwanna
 lang: nl
-featured: true
 image: images/social/waardevolle-kennis-learningspaces-1200x630.png
 featured_image: images/blog/featured/20161214-workshop-learningspaces.jpg
 ---
