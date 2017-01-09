@@ -16,54 +16,54 @@
 
     <a href="#" class="nav-trigger"><span aria-hidden="true"></span></a>
 
-		<nav class="main-nav">
+    <nav class="main-nav">
 
-			<ul>
+      <ul>
         <li>
           <%= nav_link_to t("header.home"), "/" %>
         </li>
-				<li class="has-dropdown gallery" data-content="products">
-					<%= nav_link_to t("header.products"), "/producten.html" %>
-				</li>
+        <li class="has-dropdown gallery" data-content="products">
+          <%= nav_link_to t("header.products"), "/producten.html" %>
+        </li>
 
-				<li class="has-dropdown links" data-content="services">
-					<%= nav_link_to t("header.services"), "/diensten.html" %>
-				</li>
+        <li class="has-dropdown links" data-content="services">
+          <%= nav_link_to t("header.services"), "/diensten.html" %>
+        </li>
 
         <li class="has-dropdown links" data-content="about-us">
-					<%= nav_link_to t("header.about"), "/over-ons.html" %>
-				</li>
+          <%= nav_link_to t("header.about"), "/over-ons.html" %>
+        </li>
 
         <li>
           <%= nav_link_to t("header.blog"), "/blog/index.html" %>
         </li>
 
-				<li>
-					<%= nav_link_to t("header.contact"), "/contact.html" %>
-				</li>
+        <li>
+          <%= nav_link_to t("header.contact"), "/contact.html" %>
+        </li>
 
         <li class="flags">
           <%= country_flags %>
           <%= link_to image_tag("flags/en.gif", alt: "English"), "http://en.defacto.nl", target: "_blank" %>
         </li>
-			</ul>
+      </ul>
 
-		</nav>
+    </nav>
 
-		<div class="morph-dropdown-wrapper">
+    <div class="morph-dropdown-wrapper">
 
       <div class="dropdown-arrow"></div>
 
-			<div class="dropdown-list">
+      <div class="dropdown-list">
 
-				<ul>
-					<li id="products" class="dropdown gallery">
+        <ul>
+          <li id="products" class="dropdown gallery">
 
             <%= nav_link_to t("header.products"), "/producten.html", class: "label" %>
 
-						<div class="content">
-							<ul>
-  						  <% if root_locale == :nl %>
+            <div class="content">
+              <ul>
+                <% if root_locale == :nl %>
                     <li>
                       <% locale_link_to("/capp-lms.html", { class: 'nav-capp' }) do %>
                         <em><%= t("products.capp.capp-lms") %></em>
@@ -88,26 +88,26 @@
                     </li>
                   <% end %>
 
-								<li>
+                <li>
                   <% locale_link_to("/kwaliteitspaspoort.html", { class: 'nav-kwaliteitspaspoort' }) do %>
                     <em><%= t("kwaliteitspaspoort.name") %></em>
                     <span><%= t("nav.kwaliteitspaspoort") %></span>
                   <% end %>
-								</li>
+                </li>
 
-								<li>
+                <li>
                   <% locale_link_to("/learningspaces.html", { class: 'nav-learningspaces' }) do %>
                     <em><%= t("learningspaces.name") %></em>
                     <span><%= t("nav.learningspaces") %></span>
                   <% end %>
-								</li>
+                </li>
 
-								<li>
+                <li>
                   <% locale_link_to("/e-learning-starterkit.html", { class: 'nav-elearning-starterkit' }) do %>
                     <em><%= t("elearning_starterkit.name") %></em>
                     <span><%= t("nav.starterkit") %></span>
                   <% end %>
-								</li>
+                </li>
 
                 <li>
                   <% locale_link_to("/360-feedback.html", { class: 'nav-360-feedback' }) do %>
@@ -115,20 +115,20 @@
                     <span><%= t("nav.threesixty") %></span>
                   <% end %>
                 </li>
-							</ul>
+              </ul>
 
-						</div>
-					</li>
+            </div>
+          </li>
 
-					<li id="services" class="dropdown links">
-						<%= nav_link_to t("header.services"), "/diensten.html", class: "label" %>
+          <li id="services" class="dropdown links">
+            <%= nav_link_to t("header.services"), "/diensten.html", class: "label" %>
 
-						<div class="content">
-							<ul>
-								<li>
-									<h2><%= t("header.services") %></h2>
+            <div class="content">
+              <ul>
+                <li>
+                  <h2><%= t("header.services") %></h2>
 
-									<ul class="links-list">
+                  <ul class="links-list">
                     <li><%= link_to t("services.services.elearning.name"), "/e-learning.html" %></li>
                     <li><%= link_to t("services.services.implementaties.name"), "/implementaties.html" %></li>
                     <% if I18n.locale == :de %>
@@ -140,44 +140,44 @@
                     <% if I18n.locale == :nl %>
                       <li><%= link_to t("services.services.cmt.name"), "/convenant-medische-technologie.html" %></li>
                     <% end %>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
 
           <li id="about-us" class="dropdown links">
-					  <%= nav_link_to t("header.about"), "/over-ons.html", class: "label" %>
+            <%= nav_link_to t("header.about"), "/over-ons.html", class: "label" %>
 
-						<div class="content">
-							<ul>
-								<li>
-									<h2><%= t("header.about") %></h2>
+            <div class="content">
+              <ul>
+                <li>
+                  <h2><%= t("header.about") %></h2>
 
-									<ul class="links-list">
+                  <ul class="links-list">
                     <li><%= link_to t("about.testimonials"), "/testimonials.html" %></li>
                     <li><%= link_to t("about.references"), "/referenties.html" %></li>
                     <li><%= link_to t("about.press"), "/media.html" %></li>
                     <li><%= link_to t("about.jobs"), "http://jobs.defacto.nl" %></li>
                     <li><%= link_to t("header.contact"), "/contact.html" %></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
 
           <li id="flags" class="dropdown flags">
             <%= country_flags %>
             <%= link_to image_tag("flags/en.gif", alt: "English"), "http://en.defacto.nl", target: "_blank" %>
           </li>
 
-				</ul>
+        </ul>
         <div class="bg-layer" aria-hidden="true"></div>
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-	</header>
+  </header>
 
   <% if current_page.url == "/" %>
     <div class="hero">
