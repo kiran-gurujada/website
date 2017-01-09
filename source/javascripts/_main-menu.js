@@ -29,22 +29,24 @@ jQuery(document).ready(function ($) {
       // Hover over one of the nav items -> show dropdown
       self.showDropdown($(this));
     }).mouseleave(function () {
+      var menuItem = this;
       setTimeout(function () {
         // If not hovering over a nav item or a dropdown -> hide dropdown
-        if (self.mainNavigation.find('.has-dropdown:hover').length == 0 &&
-            self.element.find('.dropdown-list:hover').length == 0) {
-          self.hideDropdown();
+        if (self.mainNavigation.find('.has-dropdown:hover').length === 0 &&
+            self.element.find('.dropdown-list:hover').length === 0) {
+          self.hideDropdown($(menuItem));
         }
       }, 50);
     });
 
     // Hover over the dropdown
     this.dropdownList.mouseleave(function () {
+      var menuItem = this;
       setTimeout(function () {
         // If not hovering over a dropdown or a nav item -> hide dropdown
-        if (self.mainNavigation.find('.has-dropdown:hover').length == 0 &&
-            self.element.find('.dropdown-list:hover').length == 0) {
-          self.hideDropdown();
+        if (self.mainNavigation.find('.has-dropdown:hover').length === 0 &&
+            self.element.find('.dropdown-list:hover').length === 0) {
+          self.hideDropdown($(menuItem));
         }
       }, 50);
     });
@@ -68,14 +70,14 @@ jQuery(document).ready(function ($) {
     });
   };
 
-  MorphDropdown.prototype.showDropdown = function (item) {
+  MorphDropdown.prototype.showDropdown = function (menuItem) {
     this.mq = this.checkMq();
     if (this.mq == 'desktop') {
       var self = this;
-      var selectedDropdown = this.dropdownList.find('#' + item.data('content'));
+      var selectedDropdown = this.dropdownList.find('#' + menuItem.data('content'));
       var selectedDropdownHeight = selectedDropdown.innerHeight();
       var selectedDropdownWidth = selectedDropdown.children('.content').innerWidth();
-      var selectedDropdownLeft = item.offset().left + (item.innerWidth() - selectedDropdownWidth) / 2;
+      var selectedDropdownLeft = menuItem.offset().left + (menuItem.innerWidth() - selectedDropdownWidth) / 2;
 
       // Update dropdown position and size
       this.updateDropdown(
@@ -86,10 +88,13 @@ jQuery(document).ready(function ($) {
       );
 
       // Add active class to the proper dropdown item
-      this.element.find('.active').removeClass('active');
+      this.dropdownWrappers.removeClass('active');
       selectedDropdown.addClass('active').removeClass('move-left move-right')
         .prevAll().addClass('move-left').end().nextAll().addClass('move-right');
-      item.addClass('active');
+
+      // Add active class to the proper menu item
+      this.mainNavigationItems.removeClass('active');
+      menuItem.addClass('active');
 
       // Show the dropdown wrapper if not visible yet
       if (!this.element.hasClass('is-dropdown-visible')) {
@@ -116,13 +121,16 @@ jQuery(document).ready(function ($) {
     });
   };
 
-  MorphDropdown.prototype.hideDropdown = function () {
+  MorphDropdown.prototype.hideDropdown = function (menuItem) {
     this.mq = this.checkMq();
     if (this.mq == 'desktop') {
-      this.element.removeClass('is-dropdown-visible')
-        .find('.active').removeClass('active')
-        .end().find('.move-left').removeClass('move-left')
-        .end().find('.move-right').removeClass('move-right');
+      this.element.removeClass('is-dropdown-visible');
+
+      // Remove active class to the active dropdown item
+      this.dropdownWrappers.removeClass('active move-left move-right');
+
+      // Remove active class to the active menu item
+      this.mainNavigationItems.removeClass('active');
     }
   };
 
