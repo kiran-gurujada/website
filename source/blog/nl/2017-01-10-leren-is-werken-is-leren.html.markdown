@@ -18,7 +18,7 @@ Hoe ben ik dan op mijn huidige niveau terecht gekomen? Dat is gebeurd tijdens he
 
 ## Blijvende behoefte naar het delen van kennis
 
-We weten dus allemaal dat deze manier van leren werkt. Helaas lijkt het alsof we dat veelal - - na de initiële inwerkperiode van werknemers - vergeten. Waar voor nieuwe medewerkers vaak een veelheid aan informatie snel en makkelijk beschikbaar is, wordt wanneer je deze ‘basiskennis’ over je functie en het bedrijf op orde hebt de kwaliteit van de informatiestroom vaak snel minder. Dat terwijl de behoefte aan kennis met elkaar delen absoluut niet afneemt. De kennis die gezocht wordt is echter vaak van een complexere aard dan tijdens een inwerktraject, waardoor minder mensen hier echt iets van weten of weten waar deze informatie is vastgelegd (als dat überhaupt al is gebeurd). Het vinden van specifieke informatie wordt al snel een zoektocht op de beruchte ‘H-schijf’. Je kent vast die ene persoon die al 3 jaar door de mappen struint om dat ene bestandje uit 2008 terug te vinden waarin ooit een besluit is vastgelegd.
+We weten dus allemaal dat deze manier van leren werkt. Helaas lijkt het alsof we dat veelal - na de initiële inwerkperiode van werknemers - vergeten. Waar voor nieuwe medewerkers vaak een veelheid aan informatie snel en makkelijk beschikbaar is, wordt wanneer je deze ‘basiskennis’ over je functie en het bedrijf op orde hebt de kwaliteit van de informatiestroom vaak snel minder. Dat terwijl de behoefte aan kennis met elkaar delen absoluut niet afneemt. De kennis die gezocht wordt is echter vaak van een complexere aard dan tijdens een inwerktraject, waardoor minder mensen hier echt iets van weten of weten waar deze informatie is vastgelegd (als dat überhaupt al is gebeurd). Het vinden van specifieke informatie wordt al snel een zoektocht op de beruchte ‘H-schijf’. Je kent vast die ene persoon die al 3 jaar door de mappen struint om dat ene bestandje uit 2008 terug te vinden waarin ooit een besluit is vastgelegd.
 
 ## Tijd om te leren van elkaars expertise in werkomgeving
 
@@ -29,7 +29,7 @@ We weten dat we het meeste leren van elkaar en om ons werk goed te doen de kenni
 
 In onze vrije tijd leren we dus continu op deze manier van elkaar. Volgens mij is het tijd om dit op dezelfde manier in onze werkomgevingen te gaan regelen. Pas wanneer medewerkers onderling makkelijk, snel kennis kunnen uitwisselen, van elkaar kunnen leren kun je mijns inziens spreken van een lerende organisatie.
 
-*Wij doen dit nu [met LearningSpaces](http://www.learningspaces.nl){:target="_blank"}, en jullie?*
+*Wij doen dit nu [met LearningSpaces](http://www.learningspaces.nl){:target="_blank"}.*
 
 ---
 Heb je vragen naar aanleiding van deze blog? Neem dan contact op met [Joep](mailto:j.lenglet@defacto.nl) of bel Defacto op 050 3144832.
