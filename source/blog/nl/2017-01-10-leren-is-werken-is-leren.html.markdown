@@ -1,12 +1,12 @@
 ---
 title: ‘Leren is werken, werken is leren’
-date: 2016-12-21 08:00 CEST
+date: 2017-01-10 08:00 CEST
 tags:
 author: Joep
 lang: nl
 featured: true
-#image: images/social/needed-1200x630.png
-#featured_image: images/blog/featured/20161128-needed.jpg
+image: images/social/leren-is-werken-1200x630.png
+featured_image: images/blog/featured/20170110-leren-is-werken.jpg
 ---
 ## De randvoorwaarde voor een lerende organisatie
 
