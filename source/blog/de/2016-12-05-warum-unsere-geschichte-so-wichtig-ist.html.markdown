@@ -4,7 +4,6 @@ date: 2016-12-05 07:00 CEST
 tags:
 author: Martina
 lang: de
-featured: true
 image: images/social/warum-unsere-geschichte-1200x630.png
 featured_image: images/blog/featured/20161205-geschichte.png
 ---
