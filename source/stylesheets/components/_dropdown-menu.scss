@@ -16,10 +16,6 @@
       min-height: calc(100% - #{$header-height});
     }
 
-    .main {
-      margin-top: $header-height;
-    }
-
     #intercom-container {
       display: none;
     }
@@ -403,125 +399,125 @@
           margin-right: 0.6em;
           width: 70px;
         }
+      }
+    }
 
-        &.nav-capp {
-          h3 {
-            color: $blue;
-          }
+    a.nav-capp {
+      h3 {
+        color: $blue;
+      }
 
-          &::before {
-            background-position: 0 0;
-          }
+      &::before {
+        background-position: 0 0;
+      }
 
-          &:hover {
-            h3 {
-              color: darken($blue, 15%);
-            }
-
-            &::before {
-              background-position: 0 -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: darken($blue, 15%);
         }
 
-        &.nav-develop {
-          h3 {
-            color: $blue;
-          }
+        &::before {
+          background-position: 0 -70px;
+        }
+      }
+    }
 
-          &::before {
-            background-position: -70px 0;
-          }
+    a.nav-develop {
+      h3 {
+        color: $blue;
+      }
 
-          &:hover {
-            h3 {
-              color: darken($blue, 15%);
-            }
+      &::before {
+        background-position: -70px 0;
+      }
 
-            &::before {
-              background-position: -70px -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: darken($blue, 15%);
         }
 
-        &.nav-kwaliteitspaspoort {
-          h3 {
-            color: $turquoise;
-          }
+        &::before {
+          background-position: -70px -70px;
+        }
+      }
+    }
 
-          &::before {
-            background-position: -140px 0;
-          }
+    a.nav-kwaliteitspaspoort {
+      h3 {
+        color: $turquoise;
+      }
 
-          &:hover {
-            h3 {
-              color: darken($turquoise, 15%);
-            }
+      &::before {
+        background-position: -140px 0;
+      }
 
-            &::before {
-              background-position: -140px -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: darken($turquoise, 15%);
         }
 
-        &.nav-learningspaces {
-          h3 {
-            color: $green;
-          }
+        &::before {
+          background-position: -140px -70px;
+        }
+      }
+    }
 
-          &::before {
-            background-position: -210px 0;
-          }
+    a.nav-learningspaces {
+      h3 {
+        color: $green;
+      }
 
-          &:hover {
-            h3 {
-              color: darken($green, 15%);
-            }
+      &::before {
+        background-position: -210px 0;
+      }
 
-            &::before {
-              background-position: -210px -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: darken($green, 15%);
         }
 
-        &.nav-elearning-starterkit {
-          h3 {
-            color: lighten($red, 15);
-          }
+        &::before {
+          background-position: -210px -70px;
+        }
+      }
+    }
 
-          &::before {
-            background-position: -280px 0;
-          }
+    a.nav-elearning-starterkit {
+      h3 {
+        color: lighten($red, 15);
+      }
 
-          &:hover {
-            h3 {
-              color: $red;
-            }
+      &::before {
+        background-position: -280px 0;
+      }
 
-            &::before {
-              background-position: -280px -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: $red;
         }
 
-        &.nav-360-feedback {
-          h3 {
-            color: $orange;
-          }
+        &::before {
+          background-position: -280px -70px;
+        }
+      }
+    }
 
-          &::before {
-            background-position: -350px 0;
-          }
+    a.nav-360-feedback {
+      h3 {
+        color: $orange;
+      }
 
-          &:hover {
-            h3 {
-              color: darken($orange, 15%);
-            }
+      &::before {
+        background-position: -350px 0;
+      }
 
-            &::before {
-              background-position: -350px -70px;
-            }
-          }
+      &:hover {
+        h3 {
+          color: darken($orange, 15%);
+        }
+
+        &::before {
+          background-position: -350px -70px;
         }
       }
     }
