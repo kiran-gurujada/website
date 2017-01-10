@@ -1,5 +1,8 @@
 ---
 nl:
+  time:
+    formats:
+      blog_date: "%e %B %Y"
   CNAME: www.defacto.nl
   urls:
     contact: https://formkeep.com/f/aff54030c202
@@ -173,6 +176,8 @@ nl:
     start_now: "Begin nu met LearningSpaces"
   products:
     title: "Producten waar we trots op zijn."
+    capp:
+      capp-lms: "CAPP Leren & Ontwikkelen"
   references:
     title: "Onze referenties"
   services:
@@ -192,6 +197,8 @@ nl:
         desc: "CAPP LMS kan naadloos %{link} worden met andere systemen zoals personeel informatiesystemen, toetsenbanken, e-learning leveranciers en nog vele andere."
         link: geïntegreerd
         name: Koppelingen
+      cmt:
+        name: "Convenant Medische Technologie"
     title: "Met de onderstaande dienstverlening zorgen we voor een succesvolle implementatie van CAPP LMS"
   testimonials:
     title: "Wat anderen over ons zeggen"
@@ -218,3 +225,9 @@ nl:
     title: "CAPP Productsheet downloaden"
     heading: "Meer informatie over opleiden & leren met CAPP LMS?"
     formkeep_title: "CAPP download productsheet page"
+  nav:
+    capp-lms: "LMS en efficiënte tools voor de ontwikkelprocessen van je medewerkers"
+    kwaliteitspaspoort: "Real-time inzicht in bevoegd- en bekwaamheid binnen je organisatie"
+    learningspaces: "Een laagdrempelig sociaal leerplatform"
+    starterkit: "Creëer je eigen professionele e-learning content"
+    threesixty: "Maak een efficiëntieslag in je HRD"

@@ -1,5 +1,8 @@
 ---
 de:
+  time:
+    formats:
+      blog_date: "%e. %B %Y"
   CNAME: www.defactolearning.de
 
   # Path translations

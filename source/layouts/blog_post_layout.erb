@@ -11,7 +11,7 @@
           <h1><%= current_article.title %></h1>
           <div class="post-meta">
             <span class="author-name"><%= author_name %></span>
-            <time datetime="<%= current_article.date.strftime('%F') %>"><%= I18n.l(current_article.date, format: "%e %B %Y", locale: I18n.locale.to_s) %></time>
+            <time datetime="<%= current_article.date.strftime('%F') %>"><%= I18n.l(current_article.date, format: :blog_date) %></time>
           </div>
         </div>
       </div>
