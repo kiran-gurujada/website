@@ -1,0 +1,529 @@
+// Used for mobile nav overlay
+.no-scroll {
+  @include media($menu-mobile) {
+    overflow: hidden;
+    position: fixed;
+
+    .dropdown-menu {
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
+      position: fixed;
+      width: 100%;
+    }
+
+    .dropdown-wrapper {
+      min-height: calc(100% - #{$header-height});
+    }
+
+    .main {
+      margin-top: $header-height;
+    }
+
+    #intercom-container {
+      display: none;
+    }
+  }
+}
+
+.dropdown-menu {
+  &::before {
+    // Never visible - used in _dropdown-menu.js to check mq
+    content: "mobile";
+    display: none;
+
+    @include media($menu-desktop) {
+      content: "desktop";
+    }
+  }
+
+  .nav-trigger {
+    background-color: $orange;
+    color: transparent;
+    height: $header-height;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: 100%;
+    top: 0;
+    white-space: nowrap;
+    width: $header-height;
+
+    @include media($menu-desktop) {
+      display: none;
+    }
+
+    span {
+      @include transform(translateX(-50%) translateY(-50%));
+      @include transition(background-color 0.3s ease);
+      background-color: $white;
+      bottom: auto;
+      height: 3px;
+      left: 50%;
+      position: absolute;
+      right: auto;
+      top: 50%;
+      width: 26px;
+
+      &::before,
+      &::after {
+        @include transition(0.3s);
+        background-color: $white;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 26px;
+      }
+
+      &::before {
+        @include transform(translateY(-9px));
+      }
+
+      &::after {
+        @include transform(translateY(9px));
+      }
+    }
+  }
+
+  &.nav-open {
+    .nav-trigger span {
+      background-color: transparent;
+
+      &::before {
+        @include transform(rotate(45deg));
+      }
+
+      &::after {
+        @include transform(rotate(-45deg));
+      }
+    }
+
+    .dropdown-wrapper {
+      display: block;
+      z-index: 9999;
+    }
+  }
+
+  .dropdown-wrapper {
+    background-color: $white;
+    box-shadow: inset 0 1px 0 $post-shadow;
+    display: none;
+    left: 0;
+    padding: 1.2em 5%;
+    position: absolute;
+    top: $header-height;
+    width: 100%;
+    z-index: 9999;
+
+    @include media($menu-desktop) {
+      @include transform(translateY(20px) translateZ(0));
+      @include transition(transform 0.3s ease);
+      box-shadow: none;
+      display: block;
+      padding: 0;
+      top: 64px;
+      width: auto;
+    }
+  }
+
+  .dropdown-arrow {
+    @include media($menu-desktop) {
+      @include backface-visibility(hidden);
+      @include transform(translate3d(0, 0, 0));
+      @include transition(opacity 0.3s ease);
+      border: 8px solid transparent;
+      border-bottom-color: $white;
+      bottom: 100%;
+      height: 0;
+      left: 0;
+      margin-left: -8px;
+      opacity: 0;
+      position: absolute;
+      width: 0;
+      will-change: transform;
+    }
+  }
+
+  .dropdown-list {
+    @include media($menu-desktop) {
+      @include backface-visibility(hidden);
+      @include transform(translate3d(0, 0, 0));
+      @include transition(visibility 0.3s ease);
+      box-shadow: 0 10px 20px rgba($black, 0.08);
+      left: 0;
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+      width: 100%;
+      will-change: transform, width, height;
+
+      > ul {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    > li {
+      margin-bottom: 3.3em;
+    }
+  }
+
+  .content {
+    @include media($menu-desktop) {
+      @include transition(transform 0.3s ease);
+      padding: 2.2em 1.8em;
+      text-align: left;
+    }
+  }
+
+  .dropdown-title {
+    color: $gray-menu;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0 0 0.6em;
+    text-transform: none;
+
+    a {
+      color: $gray-menu;
+    }
+  }
+
+  .links-list {
+    li {
+      border-bottom: 1px solid $gray;
+    }
+
+    a {
+      color: $orange;
+      display: block;
+      font-size: 1em;
+      font-weight: 600;
+      padding: 0.6em 0;
+
+      &:hover {
+        color: darken($orange, 15%);
+      }
+    }
+  }
+
+  &.is-dropdown-visible {
+    @include media($menu-desktop) {
+      .dropdown-wrapper {
+        @include transform(translateY(0));
+      }
+
+      .dropdown-arrow {
+        @include transition(opacity 0.3s ease, transform 0.3s ease);
+        opacity: 1;
+      }
+
+      .dropdown-list {
+        @include transition(transform 0.3s ease, width 0.3s ease, height 0.3s ease);
+        visibility: visible;
+      }
+
+      .bg-layer {
+        @include transition(transform 0.3s ease, opacity 0.3s ease);
+        opacity: 1;
+      }
+    }
+
+    .main-nav > ul > li {
+      > a {
+        opacity: 0.6;
+      }
+
+      &.active > a {
+        color: $orange;
+        opacity: 1;
+      }
+    }
+  }
+
+  .dropdown {
+    @include media($menu-mobile) {
+      padding: 1em 0;
+
+      &:nth-type(4) {
+        border-bottom: 0;
+      }
+    }
+
+    @include media($menu-desktop) {
+      @include transition(opacity 0.3s ease, visibility 0.3s ease);
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+      width: 100%;
+    }
+
+    &.active {
+      @include media($menu-desktop) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.flags img {
+      width: 48px;
+    }
+
+    &.move-left .content {
+      @include media($menu-desktop) {
+        @include transform(translateX(-100px));
+      }
+    }
+
+    &.move-right .content {
+      @include media($menu-desktop) {
+        @include transform(translateX(100px));
+      }
+    }
+  }
+
+  .bg-layer {
+    @include media($menu-desktop) {
+      @include backface-visibility(hidden);
+      @include transform(translate3d(0, 0, 0));
+      @include transform-origin(top left);
+      @include transition(opacity 0.3s ease);
+      background: $white;
+      height: 1px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 1px;
+      will-change: transform;
+    }
+  }
+
+  // Links dropdown
+  .links {
+    .content {
+      @include media ($menu-desktop) {
+        padding-bottom: 1.3em;
+        width: 360px;
+      }
+    }
+
+    ul li {
+      width: 100%;
+
+      @include media($menu-desktop) {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      &.blog-link {
+        @include media ($menu-desktop) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Gallery dropdown
+  .gallery {
+    .content {
+      @include media($menu-desktop) {
+        // padding-bottom: 0.;
+        width: 740px;
+      }
+    }
+
+    .dropdown-title {
+      @include media($menu-desktop) {
+        display: none;
+      }
+    }
+
+    ul {
+      @include clearfix;
+    }
+
+    li {
+      @include clearfix;
+      margin-bottom: 1.4em;
+
+      @include media($menu-desktop) {
+        float: left;
+        margin-right: 4%;
+        margin-top: 0;
+        width: 48%;
+
+        // Last odd item
+        &:nth-child(odd) {
+          &:nth-last-child(2),
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        // Last even item
+        &:nth-child(even) {
+          margin-right: 0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.1em;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+      }
+
+      a {
+        color: $medium-gray;
+        display: block;
+        font-size: 0.9em;
+        line-height: 1.2em;
+
+        // Gallery icons
+        &::before {
+          background: url("../images/icons/menu-icons-sprite.png") no-repeat 0 0;
+          content: "";
+          display: inline-block;
+          float: left;
+          height: 70px;
+          margin-right: 0.6em;
+          width: 70px;
+        }
+
+        &.nav-capp {
+          h3 {
+            color: $blue;
+          }
+
+          &::before {
+            background-position: 0 0;
+          }
+
+          &:hover {
+            h3 {
+              color: darken($blue, 15%);
+            }
+
+            &::before {
+              background-position: 0 -70px;
+            }
+          }
+        }
+
+        &.nav-develop {
+          h3 {
+            color: $blue;
+          }
+
+          &::before {
+            background-position: -70px 0;
+          }
+
+          &:hover {
+            h3 {
+              color: darken($blue, 15%);
+            }
+
+            &::before {
+              background-position: -70px -70px;
+            }
+          }
+        }
+
+        &.nav-kwaliteitspaspoort {
+          h3 {
+            color: $turquoise;
+          }
+
+          &::before {
+            background-position: -140px 0;
+          }
+
+          &:hover {
+            h3 {
+              color: darken($turquoise, 15%);
+            }
+
+            &::before {
+              background-position: -140px -70px;
+            }
+          }
+        }
+
+        &.nav-learningspaces {
+          h3 {
+            color: $green;
+          }
+
+          &::before {
+            background-position: -210px 0;
+          }
+
+          &:hover {
+            h3 {
+              color: darken($green, 15%);
+            }
+
+            &::before {
+              background-position: -210px -70px;
+            }
+          }
+        }
+
+        &.nav-elearning-starterkit {
+          h3 {
+            color: lighten($red, 15);
+          }
+
+          &::before {
+            background-position: -280px 0;
+          }
+
+          &:hover {
+            h3 {
+              color: $red;
+            }
+
+            &::before {
+              background-position: -280px -70px;
+            }
+          }
+        }
+
+        &.nav-360-feedback {
+          h3 {
+            color: $orange;
+          }
+
+          &::before {
+            background-position: -350px 0;
+          }
+
+          &:hover {
+            h3 {
+              color: darken($orange, 15%);
+            }
+
+            &::before {
+              background-position: -350px -70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

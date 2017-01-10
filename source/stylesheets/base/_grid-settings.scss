@@ -8,22 +8,26 @@
 $max-width: 1260px;
 $gutter: 3em;
 
-// Neat Breakpoints
+// Screen sizes
 $medium-screen: 640px;
 $large-screen: 860px;
 $xlarge-screen: 1200px;
 
-// Mobile first media queries
+// Mobile first breakpoints
 $medium-up:   new-breakpoint(min-width $medium-screen);
 $large-up:    new-breakpoint(min-width $large-screen);
 $xlarge-up:   new-breakpoint(min-width $xlarge-screen);
 
-// Desktop first media queries
+// Desktop first breakpoints
 $medium-down: new-breakpoint(max-width $medium-screen - 1);
 $large-down:  new-breakpoint(max-width $large-screen - 1);
 $xlarge-down: new-breakpoint(max-width $xlarge-screen - 1);
 
-// Isolated media queries
+// Isolated breakpoints
 $small-only:  new-breakpoint(max-width $medium-screen - 1);
 $medium-only: new-breakpoint(min-width $medium-screen max-width $large-screen - 1);
 $large-only:  new-breakpoint(min-width $large-screen max-width $xlarge-screen - 1);
+
+// Menu breakpoints
+$menu-mobile:  new-breakpoint(max-width 999px);
+$menu-desktop: new-breakpoint(min-width 1000px);

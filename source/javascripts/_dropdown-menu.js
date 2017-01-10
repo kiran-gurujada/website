@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  function MorphDropdown (element) {
+  function DropdownMenu (element) {
     this.element = element;
     this.mainNavigation = this.element.find('.main-nav');
     this.mainNavigationItems = this.mainNavigation.find('.has-dropdown');
@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
     this.bindEvents();
   }
 
-  MorphDropdown.prototype.checkMq = function () {
+  DropdownMenu.prototype.checkMq = function () {
     // Check screen size
     return window.getComputedStyle(this.element.get(0), '::before')
       .getPropertyValue('content')
@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
       .split(', ');
   };
 
-  MorphDropdown.prototype.bindEvents = function () {
+  DropdownMenu.prototype.bindEvents = function () {
     var self = this;
 
     // Hover over an item in the main navigation
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
     });
   };
 
-  MorphDropdown.prototype.showDropdown = function (menuItem) {
+  DropdownMenu.prototype.showDropdown = function (menuItem) {
     this.mq = this.checkMq();
     if (this.mq == 'desktop') {
       var self = this;
@@ -105,7 +105,7 @@ jQuery(document).ready(function ($) {
     }
   };
 
-  MorphDropdown.prototype.updateDropdown = function (dropdownItem, height, width, left) {
+  DropdownMenu.prototype.updateDropdown = function (dropdownItem, height, width, left) {
     this.dropdownArrow.css({
       transform: 'translate3d(' + (left + width / 2) + 'px, 0, 0)'
     });
@@ -121,7 +121,7 @@ jQuery(document).ready(function ($) {
     });
   };
 
-  MorphDropdown.prototype.hideDropdown = function (menuItem) {
+  DropdownMenu.prototype.hideDropdown = function (menuItem) {
     this.mq = this.checkMq();
     if (this.mq == 'desktop') {
       this.element.removeClass('is-dropdown-visible');
@@ -134,20 +134,22 @@ jQuery(document).ready(function ($) {
     }
   };
 
-  MorphDropdown.prototype.resetDropdown = function () {
+  DropdownMenu.prototype.resetDropdown = function () {
     this.mq = this.checkMq();
     if (this.mq == 'mobile') {
       this.dropdownList.removeAttr('style');
     }
   };
 
-  var morphDropdowns = [];
-  if ($('.morph-dropdown').length > 0) {
+  var dropdownMenus = [];
+  var $dropdownMenus = $('.dropdown-menu');
+
+  if ($dropdownMenus.length > 0) {
     var resizing = false;
 
-    // Create a MorphDropdown instance for each .morph-dropdown
-    $('.morph-dropdown').each(function () {
-      morphDropdowns.push(new MorphDropdown($(this)));
+    // Create a DropdownMenu instances
+    $dropdownMenus.each(function () {
+      dropdownMenus.push(new DropdownMenu($(this)));
     });
 
     // On resize, reset dropdown style property
@@ -155,6 +157,7 @@ jQuery(document).ready(function ($) {
     $(window).on('resize', function () {
       if (!resizing) {
         resizing =  true;
+
         if (window.requestAnimationFrame) {
           window.requestAnimationFrame(updateDropdownPosition);
         } else {
@@ -164,7 +167,7 @@ jQuery(document).ready(function ($) {
     });
 
     function updateDropdownPosition () {
-      morphDropdowns.forEach(function (element) {
+      dropdownMenus.forEach(function (element) {
         element.resetDropdown();
       });
 

@@ -5,7 +5,7 @@
 
 //= require _forms
 //= require _home
-//= require _main-menu
+//= require _dropdown-menu
 //= require _map
 
 //= require _popup
