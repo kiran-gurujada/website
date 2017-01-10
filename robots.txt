@@ -1,7 +1,7 @@
-Sitemap: http://www.defacto.nl/sitemap.xml
+Sitemap: http://www.defactolearning.de/sitemap.xml
 
 User-agent: *
 
 Disallow: /404.html
-Disallow: /bedankt/
+Disallow: /danke/
 Disallow: /workshop-convenant-mt/
