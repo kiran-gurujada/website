@@ -10,5 +10,7 @@ author_name = author ? blog_author_name(author) : article.data.author
 <% end %>
 <div class="author">
   <span class="author-name"><%= author_name %></span>
-  <time datetime="<%= article.date.strftime('%F') %>"><%= I18n.l(article.date, format: "%e %B %Y", locale: I18n.locale.to_s) %></time>
+  <time datetime="<%= article.date.strftime("%F") %>">
+    <%= I18n.l(article.date, format: :blog_date) %>
+  </time>
 </div>
