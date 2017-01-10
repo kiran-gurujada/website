@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <!--
+     ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄
+     █████ █████ █████
+     █████ █████ █████     ██████▄▄             ▟███▘
+     ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄     ███   ▀██           ▕██                    ██▌
+     █████ █████ █████     ███    ██  ▄██▀██▙ ██████ ▗▟████▙  ▟████▙ █████ ▟█████▙
+     ▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀▀     ███    ██  ██▄▄▄██  ▕██     ▁▁▁██ ▕██      ██▌  ██▎ ▕██
+     █████ █████ █████     ███    ██  ██▀▔▔▔   ▕██   ██▀▀▀██ ▕██      ██▌  ██▎ ▕██
+     █████ █████ █████     ████████▀  ▀█████▛  ▕██   ▜███▛██  ▜████▛  ▜██▛ ▜█████▛
+     ▔▔▔▔▔ ▔▔▔▔▔ ▔▔▔▔▔
+
+     Hi there!
+     The *real* source of this website can be viewed at https://github.com/DefactoSoftware/website
+     Come hack with us? http://jobs.defacto.nl/
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Animated loading indicator with isometric cubes - Defacto</title>
+    <meta name="description" content="In general people don't like to wait. And no matter how fast we make our application there will always be something that takes time to process. But in many cases...">
+
+        <link rel="canonical" href="http://blog.learningspaces.io/animated-loading-indicator-with-isometric-cubes/" />
+    
+    <meta property="og:site_name" content="Defacto - Developing People">
+    <meta property="og:title" content="Animated loading indicator with isometric cubes - Defacto">
+    <meta property="og:url" content="http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="In general people don't like to wait. And no matter how fast we make our application there will always be something that takes time to process. But in many cases...">
+    <meta property="og:image" content="http://www.defacto.nl/images/social/learningspaces-1200x630-1bed4c19.jpg">
+    <meta property="og:locale" content="nl_NL">
+
+    <link href="https://plus.google.com/101736158500234596266" rel="publisher">
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
+    <link href="/stylesheets/main-d11a0ea1.css" rel="stylesheet" />
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6700447-1', 'auto', {'allowLinker': true});
+  ga('require', 'linkid');
+  ga('require', 'linker');
+  ga('linker:autoLink', ['www.defacto.nl', 'jobs.defacto.nl', 'www.defactolearning.de']);
+    ga('send', 'pageview');
+</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body class="nl blog blog_animated-loading-indicator-with-isometric-cubes blog_animated-loading-indicator-with-isometric-cubes_index blog-article">
+
+    <div class="header-image">
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="logo">
+
+          <a href="../../"><img alt="Defacto" onerror="this.src='/images/logos/defacto-0b0a5ba9.png'; this.onerror=null;" src="/images/logos/defacto-16a6a805.svg" /></a>
+
+      </div>
+      <button type="button" class="header-menu-button" id="js-header-menu-toggle">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav class="nav">
+        <ul class="header-menu" id="js-header-menu">
+          <li><a class="" href="../../">Home</a></li>
+          <li><a class="" href="/producten/">Producten</a></li>
+          <li><a class="" href="/diensten/">Diensten</a></li>
+          <li><a class="" href="/over-ons/">Over ons</a></li>
+          <li><a class="" href="/blog/">Blog</a></li>
+          <li><a class="" href="/contact/">Contact</a></li>
+          <li class="flags">
+            <a title="Deutsch" href="http://www.defactolearning.de/"><img alt="Deutsch" src="/images/flags/de-683bd31e.gif" /></a>
+            <a target="_blank" href="http://en.defacto.nl"><img alt="English" src="/images/flags/en-3a5d3c5c.gif" /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</div>
+
+    <div class="main" role="main">
+      
+  <article class="post">
+    <header class="post-header">
+      <div class="row">
+        <div class="col">
+          <h1>Animated loading indicator with isometric cubes</h1>
+          <div class="post-meta">
+            <span class="author-name">Matthijs  Kuiper</span>
+            <time datetime="2015-05-20">20 mei 2015</time>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="row post-body">
+      <div class="col">
+        <p>In general people don't like to wait. And no matter how fast we make our application there will always be something that takes time to process. But in many cases, if the user is informed, they will be more patient.<br />
+Fortunately <a href="http://learningspaces.io/">LearningSpaces</a> is pretty fast and there is little waiting time. But sometimes transitioning between pages can take a brief moment, ie. due to slow internet or a large request to the server.</p>
+
+<p>So we can't prevent loading time but we can make it less boring. Show something awesome instead of a simple spinner or loading message. At least tickle the user's senses a bit while waiting. The first thing that came to mind was the <strong><a href="http://en.wikipedia.org/wiki/Isometric">isometric</a></strong> shape in our logo, consisting of a cube within a cube (or three times the letter "L" surrounding a cube). Perfect for our loading indicator:</p>
+
+<p><img alt="LearningSpaces logo" src="http://blog.learningspaces.io/content/images/2014/Nov/wireframe-2.png" /></p>
+
+<p>In this post I will explain and demonstrate how we recreated and animated our logo, and how to use it as a loading indicator in Ember.js.</p>
+
+<h3>Isometric cubes</h3>
+
+<p>The biggest challenge is recreating our logo using HTML and CSS. There are several ways to accomplish this but we are using the CSS <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">transform</a></strong> property to create the isometric faux-3D effect (sometimes refered to as 2.5D).</p>
+
+<p>We need two cubes, but lets start with the first one. Create a container with three child elements for the visible cube faces (top, left and right):</p>
+
+<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cube"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"face top"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"face left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"face right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+<p>Now we add the styling. Give the faces a background color and make sure they are square. Next we apply the math to create the isometric effect using the <code>transform</code> property. This property can take a list of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform#CSS_transform_functions">transform functions</a> but in the examples below we will only be using <code>rotate</code>, <code>skew</code>, <code>scale</code> and <code>translate</code>. Also note we use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin">transform-origin</a> which gives us control over the origin for the transformations. The CSS looks like this:</p>
+
+<pre class="highlight css"><code><span class="nc">.cube</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.face</span> <span class="p">{</span>
+  <span class="nl">transform-origin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.top</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#f5f5f5</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span>
+    <span class="n">rotate</span><span class="p">(</span><span class="m">210deg</span><span class="p">)</span>
+      <span class="n">skewX</span><span class="p">(</span><span class="m">-30deg</span><span class="p">)</span>
+      <span class="n">scaleY</span><span class="p">(</span><span class="m">0.864</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nc">.left</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span>
+    <span class="n">rotate</span><span class="p">(</span><span class="m">90deg</span><span class="p">)</span>
+      <span class="n">skewX</span><span class="p">(</span><span class="m">-30deg</span><span class="p">)</span>
+      <span class="n">scaleY</span><span class="p">(</span><span class="m">0.864</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nc">.right</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#e0e0e0</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span>
+    <span class="n">rotate</span><span class="p">(</span><span class="m">-30deg</span><span class="p">)</span>
+      <span class="n">skewX</span><span class="p">(</span><span class="m">-30deg</span><span class="p">)</span>
+      <span class="n">scaleY</span><span class="p">(</span><span class="m">0.864</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Note:</strong> Don't forget to add vendor prefixes for the <code>transform*</code> properties if you want cross-browser <a href="http://caniuse.com/#feat=transforms2d">support</a>. In the demos I use <a href="http://sass-lang.com">SCSS</a> and the <a href="http://bourbon.io">bourbon</a> mixin library so I don't have to worry about these prefixes.</p>
+
+<p>Check out the <strong><a href="http://codepen.io/snap/pen/NPqjMp?editors=110">demo</a></strong>. I also created a demo of an <strong><a href="http://codepen.io/snap/pen/GgJWmY?editors=110">alternative technique</a></strong>.<br />
+Both techniques are shown in the <a href="http://codepen.io/snap/pen/ogXwdz?editors=110">demo</a> below.</p>
+
+<iframe height="430" scrolling="no" src="http://codepen.io/snap/embed/ogXwdz/?height=430" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/snap/pen/ogXwdz/">ogXwdz</a> by Matthijs Kuiper (<a href="http://codepen.io/snap">@snap</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<p>Now we need a second cube so we can recreate our logo. Duplicate the cube and wrap them in a container:</p>
+
+<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cube"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cube"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+<p>Rotate the second cube 180 degrees and scale it to half its size:</p>
+
+<pre class="highlight css"><code><span class="nc">.cube</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">180deg</span><span class="p">)</span> <span class="n">scale</span><span class="p">(</span><span class="m">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Thats about it, see the <a href="http://codepen.io/snap/pen/xbGLMY?editors=110">result</a> below. I also added some extra styling to render the cube as a wireframe like we have in our logo.</p>
+
+<iframe height="284" scrolling="no" src="http://codepen.io/snap/embed/xbGLMY/?height=284" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/snap/pen/xbGLMY/">xbGLMY</a> by Matthijs Kuiper (<a href="http://codepen.io/snap">@snap</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h3>Animation please</h3>
+
+<p>To make the loading indicator complete we will add some animation. This can be done fairly easily with CSS by using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframes</a></strong> and <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">animation</a></strong>. The <code>@keyframes</code> rule gives us control over the intermediate steps in an animation by defining keyframes (or waypoints). Each keyframe describes how the animated element should render at a given time during the animation sequence. The <code>animation</code> property lets you configure the timing and duration of the animation, as well as other details of how the animation sequence should progress.</p>
+
+<p>For our loading indicator we want the cubes faces to shift between 3 colors by animating the background color. To do this we create an animation named "color-shift" and add 4 keyframes: start, finish and 2 in between:</p>
+
+<pre class="highlight css"><code><span class="k">@keyframes</span> <span class="n">color-shift</span> <span class="p">{</span>
+  <span class="nt">0</span><span class="o">%,</span> <span class="nt">100</span><span class="o">%</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">33</span><span class="o">%</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#e0e0e0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nt">66</span><span class="o">%</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#f5f5f5</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Now we can apply the animation to the cubes' faces. We configure the animation by setting its name (color-shift), duration (1.2s) and iteration count (infinite). But we don't want the cube's faces to get the same color on each keyframe. So we use <code>animation-delay</code> on the 2nd and 3rd face to delay the animation for these elements:</p>
+
+<pre class="highlight css"><code><span class="nc">.cube</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="nl">animation</span><span class="p">:</span> <span class="n">color-shift</span> <span class="m">1.2s</span> <span class="n">infinite</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.cube</span> <span class="nt">span</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">animation-delay</span><span class="p">:</span> <span class="m">-0.8s</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.cube</span> <span class="nt">span</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">animation-delay</span><span class="p">:</span> <span class="m">-0.4s</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Note:</strong> Don't forget to add vendor prefixes for <code>@keyframes</code> and <code>animation*</code> if you want cross-browser <a href="http://caniuse.com/#feat=css-animation">support</a>.</p>
+
+<p>Like the animations but think all the isometric projection math is too much fuzz? Don't worry, you can create the same effect with <strong>inline SVG</strong>. In fact, we are now using SVG for our loading indicator in LearningSpaces.</p>
+
+<p>The <a href="http://codepen.io/snap/pen/MYwVeP?editors=110">demo</a> below shows the HTML and the SVG aproach, both powered by the same CSS animation! The only difference with SVG is we have to animate the path's "fill" attribute instead of background color.</p>
+
+<iframe height="335" scrolling="no" src="http://codepen.io/snap/embed/MYwVeP/?height=335" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/snap/pen/MYwVeP/">LearningSpaces logo with CSS (animated)</a> by Matthijs Kuiper (<a href="http://codepen.io/snap">@snap</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h3>Loading template in Ember.js</h3>
+
+<p>The only thing left to do was getting our loading indicator to show up between page transitions in <a href="http://emberjs.com">Ember.js</a>. Fortunately Ember provides <a href="http://emberjs.com/guides/routing/loading-and-error-substates/#toc_code-loading-code-substates">loading substates</a> that allows you to do just that. Basicly the only thing we had to do is create a top-level template called <code>loading</code> and Ember takes care of the rest:</p>
+
+<pre class="highlight html"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-handlebars"</span> <span class="na">data-template-name=</span><span class="s">"loading"</span><span class="nt">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Loading</span> <span class="p">...</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span><span class="nt">&lt;/script&gt;</span>
+</code></pre>
+
+<p>It's as simple as that!</p>
+
+<p>But like I said as the beginning of this post LearningSpaces is pretty fast, so we hardly get to see our loading indicator. <a href="http://blog.learningspaces.io/author/hugo/">Hugo</a> wrote in his <a href="http://blog.learningspaces.io/what-weve-been-making-the-past-weeks/">post</a>:</p>
+
+<blockquote>
+  <p>we find ourselves in the awkward position of complaining that our application isn't slow enough…</p>
+</blockquote>
+
+<p>If you have any questions, contact us on <a href="https://twitter.com/learningspaces">twitter</a>!</p>
+
+      </div>
+    </div>
+
+    <footer class="row post-footer">
+      <div class="col">
+
+        <div class="author">
+            <img alt="Matthijs  Kuiper" class="avatar" src="http://www.gravatar.com/avatar/cab0e70c193a970ca142f74cdb6d7eaa.png?d=404" />
+            <h4 class="author-name">Matthijs  Kuiper</h4>
+        </div>
+
+        
+<div class="social-share">
+  <div class="title">
+    Deel dit artikel:
+  </div>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=Animated%20loading%20indicator%20with%20isometric%20cubes&amp;url=http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/&amp;via=DefactoSoftware"
+         target="_blank"
+         rel="nofollow"
+         title="Deel op Twitter"
+         class="icon-twitter2"
+         data-popup='{"width":550,"height":235}'
+         data-event="share-twitter">
+        <span>Deel op Twitter</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/sharer.php?u=http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/"
+         target="_blank"
+         rel="nofollow"
+         title="Deel op Facebook"
+         class="icon-facebook"
+         data-popup='{"width":580,"height":296}'
+         data-event="share-facebook">
+        <span>Deel op Facebook</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/"
+         target="_blank"
+         rel="nofollow"
+         title="Deel op Google+"
+         class="icon-google-plus"
+         data-popup='{"width":490,"height":530}'
+         data-event="share-google">
+        <span>Deel op Google+</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/&amp;title=Animated%20loading%20indicator%20with%20isometric%20cubes"
+         target="_blank"
+         rel="nofollow"
+         title="Deel op LinkedIn"
+         class="icon-linkedin2"
+         data-popup='{"width":550,"height":500}'
+         data-event="share-linkedin">
+        <span>Deel op LinkedIn</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.xing.com/spi/shares/new?url=http://www.defacto.nl/blog/animated-loading-indicator-with-isometric-cubes/"
+         target="_blank"
+         rel="nofollow"
+         title="Deel op Xing"
+         class="icon-xing"
+         data-popup='{"width":550,"height":500}'
+         data-event="share-xing">
+        <span>Deel op Xing</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </footer>
+  </article>
+</section>
+
+<section class="post-related gray">
+  <div class="row">
+    <h3>Meer artikelen</h3>
+
+    <ol class="blog-list">
+        <li>
+          <div class="blog-article-preview">
+  <div class="col left">
+    <a href="/blog/leren-is-werken-is-leren/"><img alt="‘Leren is werken, werken is leren’" src="/images/blog/featured/20170110-leren-is-werken.jpg" /></a>
+  </div>
+
+  <div class="col right">
+
+    <article>
+      <header class="post-header">
+        <h2 class="post-title"><a href="/blog/leren-is-werken-is-leren/">‘Leren is werken, werken is leren’</a></h2>
+      </header>
+
+      <div class="post-body">
+        De randvoorwaarde voor een lerende organisatie
+
+‘Werken is leren, leren is werken’. Dit is het motto van de academie van het MUMC (Maastricht University Medical Center). Een motto dat, hoe langer ik erover nadenk zich steeds meer bij mij nestelt als...
+        <a class="read-more" href="/blog/leren-is-werken-is-leren/">Lees verder</a>
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-meta">
+          
+  <div class="author-avatar">
+    <img alt="Joep  Lenglet" class="avatar" src="http://www.gravatar.com/avatar/28e4eb751c5deee216185974fc1b5b56.png?d=404" />
+  </div>
+<div class="author">
+  <span class="author-name">Joep  Lenglet</span>
+  <time datetime="2017-01-10">
+    10 januari 2017
+  </time>
+</div>
+
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>
+
+        </li>
+        <li>
+          <div class="blog-article-preview">
+  <div class="col left">
+    <a href="/blog/waardevolle-kennis-delen-met-learningspaces/"><img alt="Waardevolle kennis delen met LearningSpaces" src="/images/blog/featured/20161214-workshop-learningspaces.jpg" /></a>
+  </div>
+
+  <div class="col right">
+
+    <article>
+      <header class="post-header">
+        <h2 class="post-title"><a href="/blog/waardevolle-kennis-delen-met-learningspaces/">Waardevolle kennis delen met LearningSpaces</a></h2>
+      </header>
+
+      <div class="post-body">
+        Eind november was het tijd voor een workshop LearningSpaces in het mooie Zwolle. Medewerkers van onder andere het Radboud Universitair Medisch Centrum, Syndion, Maastricht Universitair Medisch Centrum, Albert Schweitzer ziekenhuis en Gelre Ziekenhuis...
+        <a class="read-more" href="/blog/waardevolle-kennis-delen-met-learningspaces/">Lees verder</a>
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-meta">
+          
+  <div class="author-avatar">
+    <img alt="Iwanna de Jonge" class="avatar" src="http://www.gravatar.com/avatar/44ba305d582bafc35a08d084cab81d54.png?d=404" />
+  </div>
+<div class="author">
+  <span class="author-name">Iwanna de Jonge</span>
+  <time datetime="2016-12-22">
+    22 december 2016
+  </time>
+</div>
+
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>
+
+        </li>
+        <li>
+          <div class="blog-article-preview">
+  <div class="col left">
+    <a href="/blog/learningspaces-op-websummit/"><img alt="LearningSpaces op Websummit 2016" src="/images/blog/featured/20161128-websummit.jpg" /></a>
+  </div>
+
+  <div class="col right">
+
+    <article>
+      <header class="post-header">
+        <h2 class="post-title"><a href="/blog/learningspaces-op-websummit/">LearningSpaces op Websummit 2016</a></h2>
+      </header>
+
+      <div class="post-body">
+        WebSummit, Europa's grootste technologiebeurs, vond plaats van 7 tot en met 11 november in Lissabon Portugal. LearningSpaces was één van de uitgenodigde start-ups om daar met mensen te praten over het product, onze activiteiten en om feedback te krijgen...
+        <a class="read-more" href="/blog/learningspaces-op-websummit/">Lees verder</a>
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-meta">
+          
+  <div class="author-avatar">
+    <img alt="Iwanna de Jonge" class="avatar" src="http://www.gravatar.com/avatar/44ba305d582bafc35a08d084cab81d54.png?d=404" />
+  </div>
+<div class="author">
+  <span class="author-name">Iwanna de Jonge</span>
+  <time datetime="2016-11-28">
+    28 november 2016
+  </time>
+</div>
+
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>
+
+        </li>
+        <li>
+          <div class="blog-article-preview">
+  <div class="col left">
+    <a href="/blog/gebruikersoverleg-22-september-2016/"><img alt="Gebruikersoverleg 22 september 2016" src="/images/blog/featured/20161005-gebruikersoverleg.jpg" /></a>
+  </div>
+
+  <div class="col right">
+
+    <article>
+      <header class="post-header">
+        <h2 class="post-title"><a href="/blog/gebruikersoverleg-22-september-2016/">Gebruikersoverleg 22 september 2016</a></h2>
+      </header>
+
+      <div class="post-body">
+        In het mooie auditorium van het Gelre Ziekenhuis hebben Gerwin, Bastiaan en Joep presentaties gehouden over het Kwaliteitspaspoort, onze applicatie 360˚Feedback en over ons product LearningSpaces.
+
+Naast de presentaties, is een van de vaste en populaire...
+        <a class="read-more" href="/blog/gebruikersoverleg-22-september-2016/">Lees verder</a>
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-meta">
+          
+<div class="author">
+  <span class="author-name">Joke Coens</span>
+  <time datetime="2016-10-05">
+     5 oktober 2016
+  </time>
+</div>
+
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>
+
+        </li>
+        <li>
+          <div class="blog-article-preview">
+  <div class="col left">
+    <a href="/blog/verbeterd-kwaliteitspaspoort-door-samenwerking/"><img alt="Verbeterd Kwaliteitspaspoort door samenwerking" src="/images/blog/featured/20160726-kpp.jpg" /></a>
+  </div>
+
+  <div class="col right">
+
+    <article>
+      <header class="post-header">
+        <h2 class="post-title"><a href="/blog/verbeterd-kwaliteitspaspoort-door-samenwerking/">Verbeterd Kwaliteitspaspoort door samenwerking</a></h2>
+      </header>
+
+      <div class="post-body">
+        In 2012 start Defacto als eerste softwarebedrijf met het digitale Kwaliteitspaspoort (KPP). Tot 2015 verbeteren we het paspoort steeds met kleine stappen op basis van klantvragen. In 2015 stellen we een groep klanten, waarvan we input hebben gekregen...
+        <a class="read-more" href="/blog/verbeterd-kwaliteitspaspoort-door-samenwerking/">Lees verder</a>
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-meta">
+          
+  <div class="author-avatar">
+    <img alt="Gerwin  Veenstra" class="avatar" src="http://www.gravatar.com/avatar/867c428b000e71709c31a78f253ab7e5.png?d=404" />
+  </div>
+<div class="author">
+  <span class="author-name">Gerwin  Veenstra</span>
+  <time datetime="2016-07-26">
+    26 juli 2016
+  </time>
+</div>
+
+        </div>
+      </footer>
+    </article>
+
+  </div>
+</div>
+
+        </li>
+    </ol>
+
+  </div>
+</section>
+
+
+    </div>
+    <footer id="footer">
+  <div class="row">
+    <div class="col">
+      <h6><a href="../../producten/">Producten</a></h6>
+      <ul>
+          <li><a href="../../capp-lms/">CAPP Leren & Ontwikkelen</a></li>
+        <li><a href="../../kwaliteitspaspoort/">Kwaliteitspaspoort</a></li>
+        <li><a href="../../e-learning-starterkit/">E-Learning Starterkit</a></li>
+        <li><a href="../../learningspaces/">LearningSpaces</a></li>
+        <li><a href="../../360-feedback/">360° Feedback</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h6><a href="../../diensten/">Diensten</a></h6>
+      <ul>
+        <li><a href="../../e-learning/">E-Learning</a></li>
+        <li><a href="../../implementaties/">Implementaties</a></li>
+          <li><a href="../../hosting-security/">Hosting & Security</a></li>
+        <li><a href="../../koppelingen/">Koppelingen</a></li>
+          <li><a href="../../convenant-medische-technologie/">Convenant Medische Technologie</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h6><a href="../../over-ons/">Defacto</a></h6>
+      <ul>
+        <li><a href="../../over-ons/">Over ons</a></li>
+        <li><a href="../../testimonials/">Testimonials</a></li>
+        <li><a href="../../referenties/">Referenties</a></li>
+        <li><a href="../../media/">Media</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="http://jobs.defacto.nl">Werken bij Defacto</a></li>
+        <li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="col contact">
+      <h6><a href="../../contact/">Contact</a></h6>
+      <p>
+        Zuiderpark 3<br>
+        9724 AD Groningen<br>
+        
+      </p><p>
+        T&nbsp;&nbsp;<a href="tel:+31503144832" class="phone">050 3144832</a><br>
+        E&nbsp;&nbsp;<a href="mailto:info@defacto.nl">info@defacto.nl</a>
+      </p>
+      <ul class="social-links">
+        <li><a href="https://twitter.com/DefactoSoftware" target="_blank" title="Twitter" class="icon-twitter" data-event="footer-twitter"></a></li>
+        <li><a href="https://www.linkedin.com/company/489640" target="_blank" title="LinkedIn" class="icon-linkedin" data-event="footer-linkedin"></a></li>
+        <li><a href="https://www.xing.com/companies/defactosoftware" target="_blank" title="Xing" class="icon-xing" data-event="footer-xing"></a></li>
+        <li><a href="https://github.com/DefactoSoftware" target="_blank" title="GitHub" class="icon-github" data-event="footer-github"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="row">
+      © 1987 - 2017 Defacto
+    </div>
+  </div>
+</footer>
+
+
+
+
+    
+
+    <script src="/javascripts/all-cbb9f196.js"></script>
+
+    <!-- Intercom -->
+    <script>
+      window.intercomSettings = { app_id: 'yb5mzq3j' };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/yb5mzq3j';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+    </script>
+
+    <!-- Google-code voor remarketingtag -->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 1008438803;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      var google_conversion_format = 3;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1008438803/?value=0&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+  </body>
+</html>
