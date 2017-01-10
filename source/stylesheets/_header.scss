@@ -383,6 +383,7 @@ $desktop-mode-down: max-width 999px;
         em {
           font-size: 1.1em;
           font-style: normal;
+          font-weight: 600;
           padding: 0 0 0.2em;
         }
 
@@ -410,6 +411,7 @@ $desktop-mode-down: max-width 999px;
       color: $orange;
       display: block;
       font-size: 1em;
+      font-weight: 600;
       padding: 0.6em 0;
 
       &:hover {
