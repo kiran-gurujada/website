@@ -8,7 +8,7 @@ featured: true
 image: images/social/lernen-ist-arbeit-1200x630.png
 featured_image: images/blog/featured/20170110-lernen-ist-arbeit.jpg
 ---
-## eine Rahmenbedingung für eine lernende Organisation
+## Eine Rahmenbedingung für eine lernende Organisation
 
 **„Lernen ist Arbeit und Arbeit ist Lernen“. Das ist der Leitspruch der Akademie einer unserer Kunden. Ein Motto das, je länger ich darüber nachdenke, sich für mich im Bildungskontext immer stärker als eine unumgängliche Wahrheit verfestigt. Das Motto kann ich auch leicht auf meine Situation übertragen. Ich arbeite zur Zeit als Consultant für ein Softwareunternehmen, das Lernmanagementsysteme (LMS) verkauft. Mein Studium - Pädagogik. Obwohl ich in meinem täglichen Leben oft Fragen begegne, die aus einer pädagogischen Perspektive sehr interessant sind, ist mein Hauptaufgabenbereich doch ein ganz anderer geworden. Und selbst wenn ich einem pädagogischen Beruf nachgegangen wäre, bin ich mir nicht sicher, ob ich gut darauf vorbereitet gewesen wäre.**
 
