@@ -3,6 +3,7 @@
 //= require bowser
 //= require fitvids
 
+//= require _raf-polyfill
 //= require _forms
 //= require _home
 //= require _dropdown-menu
